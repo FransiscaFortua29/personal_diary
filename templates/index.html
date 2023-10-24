@@ -5,6 +5,11 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
+  <!-- Bagian Tag Meta Og -->
+  <meta property="og:title" content="My Personal Diary" />
+  <meta property="og:description" content="Collection of my Personal Diary" />
+  <meta property="og:image" content="https://cdn.glitch.global/ac8f8e09-ef47-4e06-8f41-21d2107102c1/randall-bruder-3_I4NVI9d1k-unsplash.jpg?v=1698127276588" />
+
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -34,7 +39,10 @@
             let title = articles[i]['title'];
             let content = articles[i]['content'];
             let file = articles[i]['file'];
-            let profile = articles[i]['profile']
+
+            let time = articles[i]['time'] || '????.??.??';
+
+            let profile = articles[i]['profile'];
             let temp_html = `
                     <div class="col-4">
                         <div class="card">
@@ -43,7 +51,7 @@
                             <img src="../${profile}" class="card-img-top profile-img" alt="...">
                             <h5 class="card-title">${title}</h5>
                             <p class="card-text">${content}</p>
-                            <h6 class="card-subtitle mb-2 text-muted">2022.02.15</h6>
+                            <h6 class="card-subtitle mb-2 text-muted">${time}</h6>
                           </div>
                         </div>
                       </div>
